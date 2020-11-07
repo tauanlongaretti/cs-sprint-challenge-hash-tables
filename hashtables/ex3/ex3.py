@@ -2,8 +2,18 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
+    result = []
+    pairs = {}
+    for array in arrays:
+        for item in array:
+            if item in pairs:
+                pairs[item] += 1 
+            else:
+                pairs[item] = 1
+                
+    for i in pairs:
+        if pairs[i] == len(arrays):
+            result.append(i)
     return result
 
 

@@ -2,7 +2,14 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    pairs = {}
+    result = []
+
+    for num in a:
+        if -num in pairs:
+            result.append(abs(num))
+        else:
+             pairs[num] = 0
 
     return result
 
